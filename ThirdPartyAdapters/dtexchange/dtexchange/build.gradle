@@ -59,6 +59,7 @@ android {
             unitTests.returnDefaultValues = true
         }
     }
+    namespace 'com.google.ads.mediation.fyber'
 }
 tasks.withType(Test) {
     testLogging {
