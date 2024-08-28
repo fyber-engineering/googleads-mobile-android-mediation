@@ -20,6 +20,7 @@ ext {
 }
 
 android {
+    namespace 'com.google.ads.mediation.fyber'
     compileSdkVersion 33
     defaultConfig {
         minSdkVersion 19
