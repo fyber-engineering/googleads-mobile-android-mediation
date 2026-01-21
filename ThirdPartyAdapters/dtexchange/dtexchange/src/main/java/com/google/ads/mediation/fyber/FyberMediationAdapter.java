@@ -211,7 +211,8 @@ public class FyberMediationAdapter extends RtbAdapter
               KEY_APP_ID, configuredAppIds, appIdForInitialization);
       Log.w(TAG, logMessage);
     }
-
+    InneractiveAdManager.setMediationName(FyberMediationAdapter.MEDIATOR_NAME);
+    InneractiveAdManager.setMediationVersion(MobileAds.getVersion().toString());
     InneractiveAdManager.initialize(
         context,
         appIdForInitialization,
@@ -707,8 +708,6 @@ public class FyberMediationAdapter extends RtbAdapter
       @NonNull MediationRewardedAdConfiguration adConfiguration,
       @NonNull MediationAdLoadCallback<MediationRewardedAd, MediationRewardedAdCallback> callback) {
     rewardedRenderer = new FyberRewardedVideoRenderer(callback);
-    InneractiveAdManager.setMediationName(MEDIATOR_NAME);
-    InneractiveAdManager.setMediationVersion(MobileAds.getVersion().toString());
     rewardedRenderer.loadRtbAd(adConfiguration);
   }
 

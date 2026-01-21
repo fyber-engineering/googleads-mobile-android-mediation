@@ -32,9 +32,6 @@ class DTExchangeInterstitialAd(
   private var interstitialAdCallback: MediationInterstitialAdCallback? = null
 
   fun loadAd(mediationInterstitialAdConfiguration: MediationInterstitialAdConfiguration) {
-    InneractiveAdManager.setMediationName(FyberMediationAdapter.MEDIATOR_NAME)
-    InneractiveAdManager.setMediationVersion(MobileAds.getVersion().toString())
-
     val bidResponse = mediationInterstitialAdConfiguration.bidResponse
     adSpot = InneractiveAdSpotManager.get().createSpot()
     val controller = InneractiveFullscreenUnitController()
