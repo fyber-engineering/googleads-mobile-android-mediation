@@ -44,9 +44,6 @@ class DTExchangeNativeAdMapper(
   private var adContent: NativeAdContent? = null
 
   fun loadAd(mediationNativeAdConfiguration: MediationNativeAdConfiguration) {
-    InneractiveAdManager.setMediationName(FyberMediationAdapter.MEDIATOR_NAME)
-    InneractiveAdManager.setMediationVersion(MobileAds.getVersion().toString())
-
     val bidResponse = mediationNativeAdConfiguration.bidResponse
 
     nativeAdSpot =

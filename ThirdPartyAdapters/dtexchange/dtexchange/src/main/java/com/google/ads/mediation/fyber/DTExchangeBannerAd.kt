@@ -30,9 +30,6 @@ class DTExchangeBannerAd(
   private var bannerAdCallback: MediationBannerAdCallback? = null
 
   fun loadAd(mediationBannerAdConfiguration: MediationBannerAdConfiguration) {
-    InneractiveAdManager.setMediationName(FyberMediationAdapter.MEDIATOR_NAME)
-    InneractiveAdManager.setMediationVersion(MobileAds.getVersion().toString())
-
     val bidResponse = mediationBannerAdConfiguration.bidResponse
     adSpot = InneractiveAdSpotManager.get().createSpot()
     val controller = InneractiveAdViewUnitController()
